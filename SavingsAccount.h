@@ -9,11 +9,19 @@ class SavingsAccount:public Account
 private:
 	double interest = 0;
 public:
+	
+	SavingsAccount(string number, Customer customer, double balance) 
+	{
+		setBalance(balance);
+		setNumber(number);
+		setCustomer(customer);
+	}
 	void accrue(double rate)
 	{
-		double balance = this->balance;
-		balance += balance * rate;
-		interest += balance * interest;
+		double Curbalance = getBalance();
+		Curbalance += Curbalance * rate;
+		interest += Curbalance * interest;
+		setBalance(Curbalance);
 	}
 };
 

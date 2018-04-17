@@ -9,21 +9,28 @@ public:
 	double balance = 0;
 	Customer customer;
 
-	Account(string AccountNumber, double CurBalance, Customer cust)
-	{
-		number = AccountNumber;
-		balance = CurBalance;
-		customer = cust;
-	}
 	virtual void accrue(double rate)
 	{
 	}
 
-	double balance()
+	double getBalance()
 	{
 		return balance;
 	}
+	void setBalance(double b)
+	{
+		balance = b;
+	}
 
+	void setCustomer(Customer c)
+	{
+		customer = c;
+	}
+
+	void setNumber(string n)
+	{
+		number = n;
+	}
 	void deposit(double amount)
 	{
 		balance += amount;
@@ -37,7 +44,13 @@ public:
 	string toString()
 	{
 		string s;
-		s = "Account number: " + number + " Customer: " + customer + " Balance: " + balance;
+		s.append("Account number: ");
+		s.append(number);
+		s.append(" Customer: ");
+		s.append(customer.toString());
+		s.append(" Balance: ");
+		std::string balanceAsString = std::to_string(balance);
+		s.append(balanceAsString);
 		return s;
 	}
 };
