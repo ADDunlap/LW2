@@ -7,7 +7,6 @@ public:
 	string name;
 	Customer()
 	{
-		name = "Customer";
 	}
 	Customer(string cust)
 	{

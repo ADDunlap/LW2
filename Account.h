@@ -12,7 +12,9 @@ public:
 	virtual void accrue(double rate)
 	{
 	}
-
+	Account()
+	{
+	}
 	double getBalance()
 	{
 		return balance;
