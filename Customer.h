@@ -5,9 +5,11 @@ class Customer
 {
 public:
 	string name;
+
 	Customer()
 	{
 	}
+
 	Customer(string cust)
 	{
 		name = cust;

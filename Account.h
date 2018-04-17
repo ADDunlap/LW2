@@ -9,12 +9,14 @@ public:
 	double balance = 0;
 	Customer customer;
 
-	virtual void accrue(double rate)
-	{
-	}
 	Account()
 	{
 	}
+
+	virtual void accrue(double rate)
+	{
+	}
+
 	double getBalance()
 	{
 		return balance;
