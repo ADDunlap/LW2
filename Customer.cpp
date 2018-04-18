@@ -1,12 +1,23 @@
+#pragma once
 #include "stdafx.h"
-#include "Customer.h"
-
-
-Customer::Customer()
+using namespace std;
+class Customer
 {
-}
+public:
+	string name;
 
+	Customer()
+	{
+	}
 
-Customer::~Customer()
-{
-}
+	Customer(string cust)
+	{
+		name = cust;
+	}
+
+	string toString()
+	{
+		return name;
+	}
+};
+

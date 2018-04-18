@@ -1,23 +1,14 @@
-#pragma once
-using namespace std;
-#include<string>
+#ifndef CUSTOMER_H
+#include "stdafx.h"
+using std::string;
+
 class Customer
 {
 public:
-	string name;
+	Customer();
 
-	Customer()
-	{
-	}
+	Customer(string s);
 
-	Customer(string cust)
-	{
-		name = cust;
-	}
-
-	string toString()
-	{
-		return name;
-	}
+	string toString();
 };
-
+#endif
