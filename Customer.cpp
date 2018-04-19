@@ -5,18 +5,18 @@ using namespace std;
 class Customer
 {
 public:
-	string name;
+	std::string name;
 
 	Customer()
 	{
 	}
 
-	Customer(string cust)
+	Customer(std::string cust)
 	{
 		name = cust;
 	}
 
-	string toString()
+	std::string toString()
 	{
 		return name;
 	}

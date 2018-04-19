@@ -1,7 +1,6 @@
 #pragma once
 using namespace std;
 #include "stdafx.h"
-//#include "Account.h"
 #include "Customer.h"
 class Account
 {

@@ -9,7 +9,7 @@ class Bank
 	
 	void addAcount(Account);
 	void accrue(double);
-	string toString();
+	std::string toString();
 	int main();	
 };
 #endif
