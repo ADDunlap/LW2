@@ -2,12 +2,12 @@
 #define ACCOUNT_H
 #include "stdafx.h"
 #include "Customer.h"
-using std::string;
+
 class Account
 {
 public:
 
-	Account();
+	Account(std::string, Customer, double);
 	
 	virtual void accrue(double);
 
@@ -15,7 +15,7 @@ public:
 
 	void setCustomer(Customer);
 
-	void setNumber(string);
+	void setNumber(std::string);
 
 	double getBalance();
 
@@ -23,6 +23,7 @@ public:
 	
 	void deposit(double);
 
+	std::string toString();
 
 };
 #endif

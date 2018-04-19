@@ -1,14 +1,14 @@
 #ifndef CUSTOMER_H
+#define CUSTOMER_H
 #include "stdafx.h"
-using std::string;
 
 class Customer
 {
 public:
 	Customer();
 
-	Customer(string s);
+	Customer(std::string s);
 
-	string toString();
+	std::string toString();
 };
 #endif

@@ -2,8 +2,6 @@
 #define BANK_H
 #include "stdafx.h"
 #include "Account.h"
-#include "Customer.h"
-#include "SavingsAccount.h"
 using std::string;
 class Bank
 {

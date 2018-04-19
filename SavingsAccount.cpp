@@ -9,7 +9,7 @@ private:
 	double interest = 0;
 public:
 
-	SavingsAccount(string number, Customer customer, double balance)
+	SavingsAccount(string number, Customer customer, double balance) : Account(number, customer, balance)
 	{
 		setBalance(balance);
 		setNumber(number);

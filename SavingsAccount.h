@@ -1,13 +1,13 @@
 #ifndef SAVINGSACCOUNT_H
 #define SAVINGSACCOUNT_H
 #include "stdafx.h"
-#include "Customer.h"
-using std::string;
+#include "Account.h"
 
-class SavingsAccount
+
+class SavingsAccount: public Account
 {
 public:
-	SavingsAccount(string, Customer, double);
+	SavingsAccount(std::string, Customer, double);
 
 };
 #endif

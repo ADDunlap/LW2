@@ -1,19 +1,26 @@
 #pragma once
 using namespace std;
-#include<string>
 #include "stdafx.h"
+//#include "Account.h"
 #include "Customer.h"
-
 class Account
 {
 protected:
-	string number;
+	std::string number;
 	double balance = 0;
 	Customer customer;
 public:
 
-	Account()
+	Account(std::string AccountNumber, Customer cust, double CurrentBalance)
 	{
+		number = AccountNumber;
+		balance = CurrentBalance;
+		customer = cust;
+	}
+
+	virtual void accrue(double d)
+	{
+
 	}
 
 	double getBalance()
@@ -31,7 +38,7 @@ public:
 		customer = c;
 	}
 
-	void setNumber(string n)
+	void setNumber(std::string n)
 	{
 		number = n;
 	}
@@ -45,9 +52,9 @@ public:
 		balance -= amount;
 	}
 
-	string toString()
+	std::string toString()
 	{
-		string s;
+		std::string s;
 		s.append("Account number: ");
 		s.append(number);
 		s.append(" Customer: ");

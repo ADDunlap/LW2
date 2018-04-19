@@ -1,37 +1,37 @@
 #pragma once
-#include "Account.h"
-#include "Customer.h"
+#include "stdafx.h"
 #include "SavingsAccount.h"
-#include <string>
 #include <iostream>
 #include <unordered_set>
+#include <list>
+
 
 using namespace std;
 
 class Bank
 {
 public:
-	std::unordered_multiset<Account> accounts;
+	std::list<Account> accounts;
 	
 	void addAccount(Account account)
 	{
-		accounts.insert(account);
+		accounts.insert(accounts.begin(),account);
 	}
 	
 	void accrue(double rate)
 	{
-		for (auto a = accounts.begin(); a != accounts.end(); ++a) 
+		for (std::list<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it)
 		{
-			a.accrue(rate);
+			it->accrue(rate);
 		}
 	}
 	
 	string toString() 
 	{
 		string r = "";
-		for (auto a = accounts.begin(); a != accounts.end(); ++a) 
+		for (std::list<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it)
 		{
-			r.append(a.toString());
+			r.append(it->toString());
 			r.append("\n");
 		}
 		return r;
@@ -40,8 +40,9 @@ public:
 	int main()
 	{
 		Bank bank;
-		Customer c = new Customer("Ann");
-		bank.addAccount(new SavingsAccount("01002",c,200.00));
+		Customer c =  Customer("Ann");
+		SavingsAccount savings = SavingsAccount("01002", c, 200.00);
+		bank.addAccount(savings);
 		bank.accrue(0.02);
 		cout << bank.toString();
 		return 0;
