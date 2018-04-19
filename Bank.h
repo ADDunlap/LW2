@@ -1,12 +1,17 @@
+#ifndef BANK_H
+#define BANK_H
 #include "stdafx.h"
-#include "Bank.h"
-
-Bank::Bank()
+#include "Account.h"
+#include "Customer.h"
+#include "SavingsAccount.h"
+using std::string;
+class Bank
 {
-}
-
-
-Bank::~Bank()
-{
-}
-
+	public:
+	
+	void addAcount(Account);
+	void accrue(double);
+	string toString();
+	int main();	
+};
+#endif
